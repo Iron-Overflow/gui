@@ -1,0 +1,36 @@
+main.ask-container{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+div.ask-how{
+  border-bottom: 1px solid #e0e0e0;
+}
+fieldset.ask-directions{
+  font-size: 0.7em;
+}
+section.ask-title{
+  margin-bottom: 2em;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 0.9em;
+  input.ask-question{
+    width: 80%;
+  }
+}
+textarea.ask-area{
+  margin-left: 5%;
+  width: 80%;
+}
+button.post{
+  margin-left: 35%;
+  font-size: 0.9em;
+}
+
+
+
+
+button.post{
+  background-color: #009afd;
+}
