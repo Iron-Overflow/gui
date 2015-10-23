@@ -5,32 +5,33 @@ main.ask-container{
 }
 
 div.ask-how{
+  width: 98%;
   border-bottom: 1px solid #e0e0e0;
 }
+
 fieldset.ask-directions{
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
+
 section.ask-title{
+  margin-top: 2em;
   margin-bottom: 2em;
   margin-left: 5%;
-  margin-right: 5%;
-  font-size: 0.9em;
+  //margin-right: 5%;
+  font-size: 1em;
   input.ask-question{
-    width: 80%;
+    width: 86.3%;
   }
 }
+
 textarea.ask-area{
   margin-left: 5%;
-  width: 80%;
-}
-button.post{
-  margin-left: 35%;
-  font-size: 0.9em;
+  width: 85%;
 }
 
-
-
-
 button.post{
+  margin-top: 1em;
   background-color: #009afd;
+  margin-left: 5%;
+  font-size: 1em;
 }
