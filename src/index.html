@@ -10,13 +10,13 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <!-- bower:css -->
-        <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
+        <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
         <!-- endbower -->
 
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-      <main class="container">
+      <main class="container" ng-app="ironOverflow">
         <header>
           <div class="left-col">
             <img class="logo" src="http://i.stack.imgur.com/TODEi.png">iron<strong>overflow</strong>
@@ -39,13 +39,16 @@
         </header>
         <div class="place-holder">
           <h2>this is where we will put the page fragments</h2>
+          <ng-view />
         </div>
         </main>
 
 
         <!-- bower:js -->
-        <script src="/bower_components/jquery/dist/jquery.js"></script>
-        <script src="/bower_components/angular/angular.js"></script>
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/angular-route/angular-route.js"></script>
+
         <!-- endbower -->
 
         <script src="js/plugins.js"></script>
