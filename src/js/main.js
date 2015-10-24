@@ -1,4 +1,7 @@
 ;(function(){
+  // $("a.questions-link").trigger("click");
+
+
   angular.module('ironOverflow', ['ngRoute'], function($routeProvider){
     $routeProvider
       .when('/questions', {
@@ -13,14 +16,14 @@
   })
 
   .run(function($http, $rootScope){
-    // $http.get("https://iron-overflow.herokuapp.com/")
-    $http.get("/src/test.json")
+    $http.get("https://iron-overflow.herokuapp.com/")
+    // $http.get("/src/test.json")
     .then(function(arguments){
-      // console.log(arguments.data[0].title);
-      $rootScope.title = arguments.data[0].title;
-      $rootScope.body = arguments.data[0].inquiry;
-      $rootScope.createdAt = arguments.data[0].created_at;
-      $rootScope.author = 'author';
+      console.log(arguments.data[0]);
+      // $rootScope.title = arguments.data[0].title;
+      // $rootScope.body = arguments.data[0].inquiry;
+      // $rootScope.createdAt = arguments.data[0].created_at;
+      // $rootScope.author = 'author';
 
 
     });
