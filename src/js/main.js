@@ -10,14 +10,10 @@
       .when('/questions', {
         templateUrl: 'questions.html'
       })
-      .when('/answers',{
-        templateUrl: 'answers.html'
-        // console.log($location.path())
-      })
       .when('/ask',{
         templateUrl: 'ask.html'
       })
-      
+
   })
 
   .run(function($http, $rootScope){
@@ -41,24 +37,31 @@
 
   })
 
-  .run(function($http, $rootScope, $location){
-    // $http.get("/src/test.json")
-    $http.get("https://iron-overflow.herokuapp.com/questions/22")
-    .then(function(arguments){
-      // console.log(arguments.data[23])
-      var url = $location.path();
-      console.log(url);
-      $rootScope.question = arguments.data;
-    });
+
+
+  .controller('MainController', function($scope, $route, $routeParams, $location){
+    $scope.$route = $route;
+    $scope.$location = $location;
+    $scope.$routeParams = $routeParams;
   })
 
-  .run(function($http, $rootScope){
-    $rootScope.answer_qty = 999;
-    $rootScope.answer_vote = 23;
-    $rootScope.answer_created_at = '12-13-2004';
-    $rootScope.answer_body = 'testing body';
-    $rootScope.answer_author = 'David';
+  .controller('questionController', function($scope, $routeParams, $http, $rootScope){
+    $scope.name = "questionController";
+    $scope.params = $routeParams;
+    var id = $routeParams.questionId;
+    $http.get("https://iron-overflow.herokuapp.com/questions/"+id)
+      .then(function(arguments){
+        $rootScope.question = arguments.data;
+      })
 
+  })
+
+  .config(function($routeProvider, $locationProvider){
+    $routeProvider
+      .when('/answers/:questionId', {
+        templateUrl: 'answers.html',
+        controller: 'questionController'
+      })
   })
 
 })();

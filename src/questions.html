@@ -11,7 +11,7 @@
             </div>
           </section>
           <section class="big-col">
-            <a href="#/answer/{{question.id}}">{{question.title}}</a>
+            <a href="#/answers/{{question.id}}" class={{question.id}}>{{question.title}}</a>
             <p>{{question.body}}...</p>
             <span class="created-date">asked {{question.created_at | date}}</span>
             <span class="author">by {{author}}</span>
