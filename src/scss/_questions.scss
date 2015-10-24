@@ -4,6 +4,7 @@ div.questions {
 }
 
 section.small-col {
+  @extend .clearfix;
   width: 15%;
   float: left;
   text-align: center;
@@ -26,7 +27,8 @@ section.small-col {
 } //end section.small-col
 
 section.big-col {
-  width: 80%;
+  @extend .clearfix;
+  width: 85%;
   float:left;
   a {
     color: #0c65a5;

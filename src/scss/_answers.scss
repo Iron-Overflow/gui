@@ -1,1 +1,19 @@
-
+section.question {
+  h3 {
+    border-bottom: solid 1px #e0e0e0;
+  }
+  a {
+    display: block;
+  }
+} //end section.question
+section.answers {
+  @extend .clearfix;
+    border-bottom: solid 1px #e0e0e0;
+    a {
+      display: block
+    }
+  div.answer {
+    @extend .clearfix;
+    border-top: solid 1px #e0e0e0;
+  }
+}//end section.answers
