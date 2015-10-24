@@ -1,19 +1,15 @@
 
           <section class="question">
-            <h3>In GHC.TypeLits what is someNatVal good for (which we can't accomplish with natVal)?</h3>
+            <h3>{{title}}</h3>
             <section class="small-col">
               <a href="#" class="up-arrow">up arrow</a>
-              <span class="number">11</span>
+              <span class="number">{{votes}}</span>
               <a href="#" class="down-arrow">down arrow</a>
             </section>
             <section class="big-col">
-              <p>I'm trying to understand GHC.TypeLits, and specifically someNatVal. I understand the way it's used in this blog post here, but as mentioned the same example could have been implemented using natVal, like:
-
-isLength :: forall len a. KnownNat len => Integer -> List len a -> Bool
-isLength n _ = n == natVal (Proxy :: Proxy len)
-Are there any uses of someNatVal that can't be rewritten with natVal?</p>
-            <span class="created-date">created at sep 8 1924</span>
-            <span class="author">by john connor</span>
+              <p>{{body}}</p>
+            <span class="created-date">created at {{createdAt}}</span>
+            <span class="author">by {{author}}</span>
             </section>
 
           </section> <!--end section.questions -->
@@ -31,20 +27,6 @@ Are there any uses of someNatVal that can't be rewritten with natVal?</p>
               <span class="author">by{{answer_author}}</span>
             </section>
           </div>
-          <div class="answer">
-            <section class="small-col">
-              <a href="#" class="up-arrow">up arrow</a>
-              <span class="number">77</span>
-              <a href="#" class="down-arrow">down arrow</a>
-            </section>
-            <section class="big-col">
-              <p>The main use of someNatVal is using a value at run time as if it was a type that wasn't known at compile time.
-
-My answer to Can I have an unknown KnownNat? provides a really dumb example. There are a million better ways to write a program that does the same thing as that one. But it shows what someNatVal does. It's essentially a function from value to type - with an existential limiting the scope of that type to places where it's not statically known.</p>
-            <span class="created-date">created at sep 25 1924</span>
-            <span class="author">by dave o'connor</span>
-          </section>
-        </div>
           </section>  <!--end section.answers -->
           <section class="your-answer">
             <h3>Your Answer</h3>
