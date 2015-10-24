@@ -20,5 +20,13 @@
     $rootScope.createdAt = '11-23-20015';
     $rootScope.author = 'author';
   })
+  .run(function($http, $rootScope){
+    $rootScope.answer_qty = 999;
+    $rootScope.answer_vote = 23;
+    $rootScope.answer_created_at = '12-13-2004';
+    $rootScope.answer_body = 'testing body';
+    $rootScope.answer_author = 'David';
+
+  })
 
 })();

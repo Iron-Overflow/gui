@@ -18,19 +18,17 @@ Are there any uses of someNatVal that can't be rewritten with natVal?</p>
 
           </section> <!--end section.questions -->
           <section class="answers">
-            <h3># of Answers</h3>
+            <h3>{{answer_qty}} answers</h3>
             <div class="answer">
               <section class="small-col">
                 <a href="#" class="up-arrow">up arrow</a>
-                <span class="number">77</span>
+                <span class="number">{{answer_vote}}</span>
                 <a href="#" class="down-arrow">down arrow</a>
               </section>
               <section class="big-col">
-                <p>The main use of someNatVal is using a value at run time as if it was a type that wasn't known at compile time.
-
-  My answer to Can I have an unknown KnownNat? provides a really dumb example. There are a million better ways to write a program that does the same thing as that one. But it shows what someNatVal does. It's essentially a function from value to type - with an existential limiting the scope of that type to places where it's not statically known.</p>
-              <span class="created-date">created at sep 25 1924</span>
-              <span class="author">by dave o'connor</span>
+                <p>{{answer_body}}</p>
+              <span class="created-date">created at {{answer_created_at}}</span>
+              <span class="author">by{{answer_author}}</span>
             </section>
           </div>
           <div class="answer">
@@ -55,4 +53,3 @@ My answer to Can I have an unknown KnownNat? provides a really dumb example. The
               <button class="post" type="button" name="post">Post your Answer</button>
             </div>
           </section> <!--end section.your-answer -->
-      
