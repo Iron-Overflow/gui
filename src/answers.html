@@ -13,8 +13,8 @@
             </section>
 
           </section> <!--end section.questions -->
-          <section class="answers">
-            <h3>{{answer_qty}} answers</h3>
+          <h3>{{answer_qty}} answers</h3>
+          <section class="answers" ng-repeat="answer in answers | filter: {question_id: 24}">
             <div class="answer">
               <section class="small-col">
                 <a href="#" class="up-arrow">up arrow</a>
@@ -22,9 +22,9 @@
                 <a href="#" class="down-arrow">down arrow</a>
               </section>
               <section class="big-col">
-                <p>{{answer_body}}</p>
-              <span class="created-date">created at {{answer_created_at}}</span>
-              <span class="author">by{{answer_author}}</span>
+                <p>{{answer.body}}</p>
+              <span class="created-date">created on {{answer.created_at | date}}</span>
+              <span class="author">by{{answer.user_id}}</span>
             </section>
           </div>
           </section>  <!--end section.answers -->

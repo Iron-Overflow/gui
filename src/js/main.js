@@ -20,20 +20,11 @@
     $http.get("https://iron-overflow.herokuapp.com/")
     // $http.get("/src/test.json")
     .then(function(arguments){
-      // console.log(arguments.data[0]);
       $rootScope.questions = arguments.data;
-      // $rootScope.body = arguments.data[0].inquiry;
-      // $rootScope.createdAt = arguments.data[0].created_at;
-      // $rootScope.author = 'author';
-
 
     });
     $rootScope.votes = 12;
     $rootScope.numberAnswers = 45;
-    // $rootScope.title = 'testing question title';
-    // $rootScope.body = 'testing question body';
-    // $rootScope.createdAt = '11-23-20015';
-    // $rootScope.author = 'author';
 
   })
 
@@ -53,8 +44,13 @@
       .then(function(arguments){
         $rootScope.question = arguments.data;
       })
+      $http.get("https://iron-overflow.herokuapp.com/answers/")
+      .then(function(arguments){
+        $rootScope.answers = arguments.data;
+        $rootScope.answer_qty = arguments.data.length;
+      })
+    })
 
-  })
 
   .config(function($routeProvider, $locationProvider){
     $routeProvider
