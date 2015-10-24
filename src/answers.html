@@ -1,14 +1,14 @@
 
           <section class="question">
-            <h3>{{title}}</h3>
+            <h3>Question: {{question.title}}</h3>
             <section class="small-col">
               <a href="#" class="up-arrow">up arrow</a>
               <span class="number">{{votes}}</span>
               <a href="#" class="down-arrow">down arrow</a>
             </section>
             <section class="big-col">
-              <p>{{body}}</p>
-            <span class="created-date">created on {{createdAt | date}}</span>
+              <p>{{question.body}}</p>
+            <span class="created-date">created on {{question.created_at | date}}</span>
             <span class="author">by {{author}}</span>
             </section>
 
