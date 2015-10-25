@@ -13,7 +13,7 @@
             </section>
 
           </section> <!--end section.questions -->
-          <h3>{{answers.length}} answers</h3>
+          <h3 class="answer-number">{{answers.length}} answers</h3>
           <section class="answers" ng-repeat="answer in answers | orderBy: '-created_at'">
             <div class="answer">
               <section class="small-col">
