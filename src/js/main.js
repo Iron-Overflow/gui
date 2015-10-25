@@ -18,7 +18,7 @@
   })
 
   .run(function($http, $rootScope){
-    $http.get("https://iron-overflow.herokuapp.com/")
+    $http.get("https://iron-overflow.herokuapp.com/questions.json")
     // $http.get("/src/test.json")
     .then(function(arguments){
       $rootScope.questions = arguments.data;
@@ -60,5 +60,40 @@
         controller: 'questionController'
       })
   })
+
+
+
+  .controller("askController", function($http){
+    console.log("calling askController")
+    this.question={
+      // title:"",
+      // body:"",
+    }
+     //console.log($scope.question.title)
+    this.addQuestion = function(){
+       //console.log(this.question.title);
+       //TODO change get for post when ready
+      $http.get("https://iron-overflow.herokuapp.com/questions.json")
+      .then(function(response){
+        console.log(response.data[0].id)
+      })
+      this.question = {}
+    };
+  })
+
+  .controller("userController", function($http){
+    console.log("calling user controller");
+    this.user={};
+    console.log("i'm getting this far");
+    this.createUser = function(){
+      console.log("calling addUser function");
+      console.log(this.user.username);
+      //$http.post()
+      //.then(function(response){
+        //console.log(response.data[0].id)
+      // });
+      this.user = {};
+    };
+  });
 
 })();
