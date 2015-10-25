@@ -1,9 +1,9 @@
 <section class="questions-container">
   <fieldset class="search">
-    <input class="search" placeholder="search"></input>
-    <button>search</button>
+    <input class="search" placeholder="type your search" ng-model="query"></input>
+    <!-- <button>search</button> -->
   </fieldset>
-  <div class="questions" ng-repeat="question in questions | orderBy: '-created_at'">
+  <div class="questions" ng-repeat="question in questions | orderBy: '-created_at'| filter:query">
     <section class="small-col">
       <div class="number-votes">
         <span class="number"><strong>{{votes}}</strong></span>
