@@ -50,7 +50,16 @@
       $http.get("https://iron-overflow.herokuapp.com/answers/")
       .then(function(arguments){
         $rootScope.answers = arguments.data;
+        // $rootScope.answer_qty = arguments.data.length;
         $rootScope.answer_qty = arguments.data.length;
+        // for(var index = 0; index < arguments.data.length; index++){
+        //   if(arguments.data[index].question_id == id) {
+        //     console.log("id: "+id);
+        //     console.log("question_id: " + arguments.data[index].question_id);
+        //     $rootScope.answer_qty++;
+        //   }
+        // };
+
       })
     })
 
