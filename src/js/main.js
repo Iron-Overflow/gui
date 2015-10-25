@@ -8,10 +8,10 @@
         redirectTo: 'questions'
       })
       .when('/questions', {
-        templateUrl: 'questions.html'
+        templateUrl: 'partials/questions.html'
       })
       .when('/ask',{
-        templateUrl: 'ask.html'
+        templateUrl: 'partials/ask.html'
       })
 
   })
@@ -55,7 +55,7 @@
   .config(function($routeProvider, $locationProvider){
     $routeProvider
       .when('/answers/:questionId', {
-        templateUrl: 'answers.html',
+        templateUrl: 'partials/answers.html',
         controller: 'questionController'
       })
   })
