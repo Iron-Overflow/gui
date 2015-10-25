@@ -4,13 +4,21 @@ section.question {
   }
   a {
     display: block;
+    img {
+      // background-color: black;
+      width: 35px;
+    }
   }
 } //end section.question
 section.answers {
   @extend .clearfix;
     border-bottom: solid 1px #e0e0e0;
     a {
-      display: block
+      display: block;
+      img {
+        // background-color: black;
+        width: 35px;
+      }
     }
   div.answer {
     @extend .clearfix;
