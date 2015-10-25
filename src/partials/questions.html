@@ -10,7 +10,7 @@
         <span class="words">votes</span>
       </div>
       <div class="number-answers">
-        <span class="number"><strong>{{numberAnswers}}</strong></span>
+        <span class="number"><strong>{{question.answers.length}}</strong></span>
         <span class="words">answers</span>
       </div>
     </section>
@@ -18,7 +18,7 @@
       <a href="#/answers/{{question.id}}" class={{question.id}}>{{question.title}}</a>
       <p>{{question.body}}...</p>
       <span class="created-date">asked {{question.created_at | date}}</span>
-      <span class="author">by {{author}}</span>
+      <span class="author">posted by {{question.username}}</span>
     </section>
   </div>
 </section>
