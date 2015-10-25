@@ -1,6 +1,4 @@
-;(function(){
-  // $("a.questions-link").trigger("click");
-
+;(function(){ //IIFE for angular
 
   angular.module('ironOverflow', ['ngRoute'], function($routeProvider){
     $routeProvider
