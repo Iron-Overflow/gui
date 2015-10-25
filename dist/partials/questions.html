@@ -1,19 +1,24 @@
-
-        <div class="questions" ng-repeat="question in questions | orderBy: '-created_at'">
-          <section class="small-col">
-            <div class="number-votes">
-              <span class="number"><strong>{{votes}}</strong></span>
-              <span class="words">votes</span>
-            </div>
-            <div class="number-answers">
-              <span class="number"><strong>{{numberAnswers}}</strong></span>
-              <span class="words">answers</span>
-            </div>
-          </section>
-          <section class="big-col">
-            <a href="#/answers/{{question.id}}" class={{question.id}}>{{question.title}}</a>
-            <p>{{question.body}}...</p>
-            <span class="created-date">asked {{question.created_at | date}}</span>
-            <span class="author">by {{author}}</span>
-          </section>
-        </div>
+<section class="questions-container">
+  <fieldset class="search">
+    <input class="search" placeholder="search"></input>
+    <button>search</button>
+  </fieldset>
+  <div class="questions" ng-repeat="question in questions | orderBy: '-created_at'">
+    <section class="small-col">
+      <div class="number-votes">
+        <span class="number"><strong>{{votes}}</strong></span>
+        <span class="words">votes</span>
+      </div>
+      <div class="number-answers">
+        <span class="number"><strong>{{numberAnswers}}</strong></span>
+        <span class="words">answers</span>
+      </div>
+    </section>
+    <section class="big-col">
+      <a href="#/answers/{{question.id}}" class={{question.id}}>{{question.title}}</a>
+      <p>{{question.body}}...</p>
+      <span class="created-date">asked {{question.created_at | date}}</span>
+      <span class="author">by {{author}}</span>
+    </section>
+  </div>
+</section>
