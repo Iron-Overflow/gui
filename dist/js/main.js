@@ -13,6 +13,9 @@
       .when('/ask',{
         templateUrl: 'partials/ask.html'
       })
+      .when('/newuser', {
+        templateUrl: 'partials/newuser.html'
+      })
 
   })
 
