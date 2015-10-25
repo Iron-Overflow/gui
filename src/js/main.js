@@ -14,7 +14,6 @@
       .when('/newuser', {
         templateUrl: 'partials/newuser.html'
       })
-
   })
 
   .run(function($http, $rootScope){
@@ -22,14 +21,10 @@
     // $http.get("/src/test.json")
     .then(function(arguments){
       $rootScope.questions = arguments.data;
-
     });
     $rootScope.votes = 12;
     $rootScope.numberAnswers = 45;
-
   })
-
-
 
   .controller('MainController', function($scope, $route, $routeParams, $location){
     $scope.$route = $route;
@@ -51,8 +46,6 @@
         $rootScope.answer_qty = arguments.data.length;
       })
     })
-    
-
 
   .config(function($routeProvider, $locationProvider){
     $routeProvider
@@ -62,13 +55,9 @@
       })
   })
 
-
-
   .controller("askController", function($http){
     console.log("calling askController")
     this.question={
-      // title:"",
-      // body:"",
     }
      //console.log($scope.question.title)
     this.addQuestion = function(){
