@@ -62,7 +62,7 @@
      //console.log($scope.question.title)
     this.addQuestion = function(){
        //console.log(this.question.title);
-       //TODO change get for post when ready
+       //TODO change get for post when ready some day
       $http.get("https://iron-overflow.herokuapp.com/questions.json")
       .then(function(response){
         console.log(response.data[0].id)
@@ -78,7 +78,8 @@
     this.createUser = function(){
       console.log("calling addUser function");
       console.log(this.user.username);
-      //$http.post()
+      //$http.post("http://iron-overflow.herokuapp.com/users.json")
+      //when we have the data some day
       //.then(function(response){
         //console.log(response.data[0].id)
       // });
