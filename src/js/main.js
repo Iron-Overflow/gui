@@ -51,6 +51,7 @@
         $rootScope.answer_qty = arguments.data.length;
       })
     })
+    
 
 
   .config(function($routeProvider, $locationProvider){
