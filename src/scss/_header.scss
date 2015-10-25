@@ -1,6 +1,12 @@
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+}
 
 header {
   @extend .clearfix;
+  padding-bottom: 5%;
 
   a {
   background-color: #9ea3a9;
@@ -15,7 +21,6 @@ header {
 
 
 .left-col {
-  // background-color: lightgray;
   width: 50%;
   float: left;
   a.picture-link {
@@ -24,15 +29,28 @@ header {
   }
   img.logo {
     height: 50px;
+    margin-bottom: 20px;
   }
 }//end of left-col
 
 .right-col {
-  // background-color: gray;
   width: 50%;
   float: left;
-  // input.search {
-  //   width: 329px;
-  // }
-
+  fieldset.login {
+    text-align: right;
+    float: right;
+    input {
+      display: block;
+      margin-bottom: 5%;
+    }
+    button {
+      background-color: #9ea3a9;
+      color: white;
+      border-color: #9ea3a9;
+      &:hover {
+      background-color: #f69c55;
+      border-color: #f69c55;
+      }
+    }
+  }
 }//end of right-col
