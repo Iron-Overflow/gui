@@ -8,23 +8,23 @@
             </section>
             <section class="big-col">
               <p>{{question.body}}</p>
-            <span class="created-date">created on {{question.created_at | date}}</span>
-            <span class="author">by {{author}}</span>
+            <span class="created-date">asked on {{question.created_at | date}}</span>
+            <span class="author">by {{question.username}}</span>
             </section>
 
           </section> <!--end section.questions -->
-          <h3>{{answer_qty}} answers</h3>
-          <section class="answers" ng-repeat="answer in answers | filter: {question_id: 24}">
+          <h3>{{answers.length}} answers</h3>
+          <section class="answers" ng-repeat="answer in answers | orderBy: '-created_at'">
             <div class="answer">
               <section class="small-col">
                 <a href="" class="up-arrow"><img src="img/up-arrow.png"></a>
-                <span class="number">{{answer_vote}} of votes</span>
+                <span class="number">{{answer.vote}}  votes</span>
                 <a href="" class="down-arrow"><img src="img/down-arrow.png"></a>
               </section>
               <section class="big-col">
                 <p>{{answer.body}}</p>
-              <span class="created-date">created on {{answer.created_at | date}}</span>
-              <span class="author">by{{answer.user_id}}</span>
+              <span class="created-date">answered on {{answer.created_at | date}}</span>
+              <span class="author">by {{answer.username}}</span>
             </section>
           </div>
           </section>  <!--end section.answers -->
