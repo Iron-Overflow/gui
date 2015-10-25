@@ -1,0 +1,37 @@
+
+          <section class="question">
+            <h3>Question: {{question.title}}</h3>
+            <section class="small-col">
+              <a href="#" class="up-arrow">up arrow</a>
+              <span class="number">{{votes}}</span>
+              <a href="#" class="down-arrow">down arrow</a>
+            </section>
+            <section class="big-col">
+              <p>{{question.body}}</p>
+            <span class="created-date">created on {{question.created_at | date}}</span>
+            <span class="author">by {{author}}</span>
+            </section>
+
+          </section> <!--end section.questions -->
+          <h3>{{answer_qty}} answers</h3>
+          <section class="answers" ng-repeat="answer in answers | filter: {question_id: 24}">
+            <div class="answer">
+              <section class="small-col">
+                <a href="#" class="up-arrow">up arrow</a>
+                <span class="number">{{answer_vote}}</span>
+                <a href="#" class="down-arrow">down arrow</a>
+              </section>
+              <section class="big-col">
+                <p>{{answer.body}}</p>
+              <span class="created-date">created on {{answer.created_at | date}}</span>
+              <span class="author">by{{answer.user_id}}</span>
+            </section>
+          </div>
+          </section>  <!--end section.answers -->
+          <section class="your-answer">
+            <h3>Your Answer</h3>
+            <textarea class="ask-area" name="question" rows="8" cols="60"></textarea>
+            <div class="ask-button">
+              <button class="post" type="button" name="post">Post your Answer</button>
+            </div>
+          </section> <!--end section.your-answer -->
