@@ -16,13 +16,15 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-      <main class="container">
+      <main class="container" ng-app="ironOverflow" ng-controller="MainController">
         <header>
           <div class="left-col">
-            <img class="logo" src="http://i.stack.imgur.com/TODEi.png">iron<strong>overflow</strong>
+            <a href="index.html#/questions" class="picture-link"><img class="logo" src="img/logo.png">iron<strong>overflow</strong></a>
             <nav class="menu">
-              <a href="questions.html">Questions</a>
-              <a href="ask.html">Ask a Question</a>
+              <a href="#questions" class="questions-link">Questions</a>
+              <a href="#ask">Ask a Question</a>
+              <a href="#newuser">Create Account</a>
+              <!-- <a href="#answers">Answers</a> -->
             </nav>
           </div>
           <div class="right-col"
@@ -31,14 +33,10 @@
               <input placeholder="password"></input>
               <button>login</button>
             </fiedset>
-            <fieldset class="search">
-              <input class="search" placeholder="search"></input>
-              <button>search</button>
-            </fieldset>
           </div>
         </header>
         <div class="place-holder">
-          <h2>this is where we will put the page fragments</h2>
+          <ng-view />
         </div>
         </main>
 
@@ -46,6 +44,8 @@
         <!-- bower:js -->
         <script src="/bower_components/jquery/dist/jquery.js"></script>
         <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-route/angular-route.js"></script>
+
         <!-- endbower -->
 
         <script src="js/plugins.js"></script>
