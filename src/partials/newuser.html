@@ -1,29 +1,30 @@
 
-  <div class="login-area">
+  <form class="login-area" ng-controller="userController as userCtrl" ng-submit="userCtrl.createUser()" novalidate>
     <div class="login">
 
       <section class="username">
         <label  class="username" for="username">User Name</label>
-        <input  class="username" placeholder="user name">
+        <input  class="username" placeholder="user name" ng-model="userCtrl.user.username">
       </section>
       <section class="emailaddress">
         <label class="emailaddress" for="emailaddress">Email Address</label>
-        <input class="emailaddress" placeholder="email address">
+        <input class="emailaddress" placeholder="email address" ng-model="userCtrl.user.email">
       </section>
       <section class="password">
         <label class="password" for="password">Password</label>
-        <input class="password" placeholder="password">
+        <input class="password" placeholder="password" ng-model="userCtrl.user.password">
       </section>
       <section class="confpassword">
         <label class="confpassword" for="password">Confirm Password</label>
         <input class="confpassword" placeholder="confirm your password">
       </section>
 
-      <button class="login" type="submit" name="button">Log in</button>
+      <button class="login" type="Submit" name="button">Log in</button>
       <p class="log-text">
         By registering, you agree to the privacy policy and terms of service.
+        {{userCtrl.user.username}}
       </p>
 
     </div>
-    
-  </div>
+
+  </form>
