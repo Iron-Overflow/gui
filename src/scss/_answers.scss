@@ -1,19 +1,38 @@
 section.question {
+  @extend .clearfix;
+  margin-bottom: 5%;
   h3 {
     border-bottom: solid 1px #e0e0e0;
   }
   a {
     display: block;
+    img {
+      width: 35px;
+    }
   }
 } //end section.question
+h3.answer-number {
+  margin-bottom: 0;
+}
 section.answers {
   @extend .clearfix;
-    border-bottom: solid 1px #e0e0e0;
     a {
-      display: block
+      display: block;
+      img {
+        width: 35px;
+      }
     }
   div.answer {
     @extend .clearfix;
     border-top: solid 1px #e0e0e0;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
 }//end section.answers
+section.your-answer {
+  button {
+    background-color: #009afd;
+    border-color: #009afd;
+    color: white;
+  }
+}
