@@ -77,16 +77,21 @@
 
   .controller("userController", function($http){
     console.log("calling user controller");
-    this.user={};
-    console.log("i'm getting this far");
+    this.user={
+      username: "",
+      email: "",
+      password: ""
+    };
+    // console.log("i'm getting this far");
     this.createUser = function(){
-      console.log("calling addUser function");
-      console.log(this.user.username);
-      //$http.post("http://iron-overflow.herokuapp.com/users.json")
+      // console.log("calling addUser function");
+      // console.log(this.user.username);
+      $http.post("https://iron-overflow.herokuapp.com/users.json", this.user)
+      // $http.post("http://iron-overflow.herokuapp.com/users", this.user)
       //when we have the data some day
-      //.then(function(response){
-        //console.log(response.data[0].id)
-      // });
+      .then(function(response){
+        // console.log(response.data.length)
+      });
       this.user = {};
     };
   });
